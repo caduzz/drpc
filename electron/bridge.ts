@@ -31,6 +31,18 @@ export const api = {
 	},
 	stopRpc: () => {
 		ipcRenderer.send("stopRpc");
+	},
+	isRpcActive: async () => {
+		return await ipcRenderer.invoke("isRpcActive");
+	},
+	sendToast: (type: string, message: string) => {
+		ipcRenderer.send("sendToast", { type, message });
+	},
+	on: (channel: string, func: (...args: any[]) => void) => {
+		ipcRenderer.on(channel, (event, ...args) => func(...args));
+	},
+	off: (channel: string, func: (...args: any[]) => void) => {
+		ipcRenderer.removeListener(channel, func);
 	}
 };
 

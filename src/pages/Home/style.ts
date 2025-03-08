@@ -21,34 +21,21 @@ export const HomeContainer = styled.main`
 
             .content {
                 width: 100%;
-            }
-
-            .formDataList {
-                width: 40%;
-                ul {
-                    margin-top: 2rem;
-                    list-style: none;
-                    padding: 0;
-                    li {
-                        padding: 0.6rem 0.8rem;
-                        margin-bottom: 0.5rem;
-                        border: .01rem solid #ddd1;
-                        border-radius: 6px;
-                        background-color: #09090B;
-                        color: #fff;
-                        cursor: pointer;
-                        transition: background-color 0.3s;
-                        &:hover {
-                            background-color: #333;
-                        }
-                        strong {
-                            color: #fff;
-                        }
-                    }
-                    .selected {
-                        border-color: #ffffff;
-                        background-color: #333;
-                    }
+                display: flex;
+                
+                button {
+                    margin-top: 15px;
+                    padding: 0.75rem;
+                    border-radius: 6px;
+                    background-color: #09090B;
+                    color: #ffffff;
+                    border: .01rem solid #ddd1;
+                    cursor: pointer;
+                    transition: .3s;
+                }
+                
+                button:hover {
+                    background-color: #333;
                 }
             }
         }

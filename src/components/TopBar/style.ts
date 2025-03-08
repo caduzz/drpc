@@ -9,7 +9,8 @@ export const TobBarContainer = styled.nav`
 
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
+
     .topBarContent {
         padding: .4rem;
         display: flex;
